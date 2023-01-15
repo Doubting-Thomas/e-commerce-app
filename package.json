@@ -1,0 +1,17 @@
+{
+  "name": "azure-store",
+  "version": "1.0.0",
+  "description": "E-commerce Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Ayo",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2",
+    "sass": "^1.57.1"
+  }
+}
