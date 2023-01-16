@@ -1,0 +1,65 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // height: 3rem;
+  width: 100%;
+  padding: 0 2rem;
+  background-color: $color-tertiary;
+  color: $color-primary;
+  position: fixed;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon > svg {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 1rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: yellow;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    // &:hover {
+    // }
+  }
+
+  // &__heading {
+  //   text-transform: uppercase;
+  // }
+}
