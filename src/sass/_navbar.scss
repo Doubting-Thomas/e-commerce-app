@@ -54,7 +54,8 @@
     cursor: pointer;
     transition: all 0.3s;
 
-    // &:hover {
-    // }
+    &:hover {
+      color: $color-primary-dark;
+    }
   }
 }
