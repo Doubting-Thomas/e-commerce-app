@@ -1,0 +1,18 @@
+.hero {
+  padding: 10rem 5rem;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.7),
+      rgba($color-primary-dark, 0.9)
+    ),
+    url(/src/img/hero-img.jpg);
+
+  background-size: cover;
+  background-position: top;
+
+  &__text-box {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
