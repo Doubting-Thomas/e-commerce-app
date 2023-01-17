@@ -7,7 +7,6 @@
     padding: 1.5rem 4rem;
     font-weight: 700;
     display: inline-block;
-    border-radius: 10rem;
     transition: all 0.3s;
     position: relative;
   }
@@ -15,6 +14,7 @@
   &--white {
     background-color: $color-secondary;
     color: $color-primary;
+    border-radius: 10rem;
 
     &::after {
       background-color: $color-secondary;
@@ -47,5 +47,12 @@
     left: 0;
     z-index: -1;
     transition: all 0.3s;
+  }
+
+  &--intro {
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-tertiary;
+    text-align: center;
   }
 }
