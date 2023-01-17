@@ -59,4 +59,11 @@
   &:hover {
     background-color: $color-primary-dark;
   }
+
+  &--about {
+    width: 100%;
+    background-color: $color-tertiary;
+    color: $color-primary-dark;
+    text-align: center;
+  }
 }
