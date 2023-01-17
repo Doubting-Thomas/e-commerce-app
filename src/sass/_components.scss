@@ -66,4 +66,8 @@
     color: $color-primary-dark;
     text-align: center;
   }
+
+  &:hover {
+    background-color: $color-secondary;
+  }
 }
