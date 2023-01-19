@@ -56,10 +56,10 @@
     background-color: $color-primary;
     color: $color-tertiary;
     text-align: center;
-  }
 
-  &:hover {
-    background-color: $color-primary-dark;
+    &:hover {
+      background-color: $color-primary-dark;
+    }
   }
 
   &--about {
@@ -67,10 +67,10 @@
     background-color: $color-tertiary;
     color: $color-primary-dark;
     text-align: center;
-  }
 
-  &:hover {
-    background-color: $color-secondary;
+    &:hover {
+      background-color: $color-secondary;
+    }
   }
 
   &--products {
