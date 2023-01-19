@@ -9,6 +9,8 @@
     display: inline-block;
     transition: all 0.3s;
     position: relative;
+    border: none;
+    cursor: pointer;
   }
 
   &--white {
@@ -69,5 +71,16 @@
 
   &:hover {
     background-color: $color-secondary;
+  }
+
+  &--products {
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-tertiary;
+    text-align: center;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
   }
 }
