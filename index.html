@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
+      <nav class="nav nav__open">
         <div class="nav__intro">
           <div class="nav__logo">
             <span class="nav__icon">
@@ -31,8 +31,23 @@
           </div>
         </div>
 
+        <div class="nav__main">
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="#section--1">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--2">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--3">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
         <div class="nav__buttons">
-          <button class="nav__btn">
+          <button class="nav__btn nav-btn-bookmarks">
             <span class="nav__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -43,7 +58,7 @@
             </span>
           </button>
 
-          <button class="nav__btn">
+          <button class="nav__btn nav-btn-cart">
             <span class="nav__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                 <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -53,6 +68,37 @@
               </svg>
             </span>
           </button>
+
+          <button class="nav__btn btn-nav">
+            <span class="nav__mobile-nav" name="nav__outline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </span>
+
+            <span class="nav__mobile-nav" name="nav__close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+               />
+              </svg>
+            </span>
+          </button>
+
+          <!-- <button class="nav__btn">
+            <span class="nav__menu-close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                ! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <!-- <path
+                  d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                />
+              </svg> -->
+            <!-- </span>
+          </button> -->
 
           <!-- <div class="nav__menu">
             <input
@@ -79,8 +125,8 @@
                   <a class="nav__link" href="#section--3">Contact</a>
                 </li>
               </ul>
-            </div> -->
-          <!-- </div> -->
+            </div>
+          </div> -->
         </div>
       </nav>
 
