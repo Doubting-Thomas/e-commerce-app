@@ -28,11 +28,11 @@
   &__mobile-nav > svg {
     height: 2rem;
     width: 2rem;
-    //fill: $color-primary;
+    fill: $color-primary;
   }
 
   &__mobile-nav[name="nav__outline"] > svg {
-    fill: black;
+    fill: $color-primary;
   }
 
   &__mobile-nav[name="nav__close"] > svg {
