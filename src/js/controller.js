@@ -1,7 +1,8 @@
 import { navMenu } from "./config";
-import { mobileNav } from "./mobileNav";
+import { displayMobileNav, removeMobileNav } from "./mobileNav";
 
 function init() {
-  mobileNav();
+  displayMobileNav();
+  //removeMobileNav();
 }
 init();

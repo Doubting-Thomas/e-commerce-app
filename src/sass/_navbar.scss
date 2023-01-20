@@ -118,9 +118,18 @@
 
 .nav__open .nav__mobile-nav[name="nav__close"] > svg {
   display: block;
+  fill: $color-tertiary;
 }
 
 .nav__open .nav__mobile-nav[name="nav__outline"] {
+  display: none;
+}
+
+.hidden .nav-btn-bookmarks {
+  display: none;
+}
+
+.hidden .nav-btn-cart {
   display: none;
 }
 

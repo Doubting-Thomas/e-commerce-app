@@ -8,7 +8,6 @@
     font-weight: 700;
     display: inline-block;
     transition: all 0.3s;
-    position: relative;
     border: none;
     cursor: pointer;
   }
@@ -19,7 +18,7 @@
     border-radius: 10rem;
 
     &::after {
-      background-color: $color-secondary;
+      background-color: $color-tertiary;
     }
   }
 
@@ -83,4 +82,9 @@
       background-color: $color-primary-dark;
     }
   }
+}
+
+.hide .btn--white {
+  opacity: 0;
+  pointer-events: none;
 }
