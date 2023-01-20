@@ -3,4 +3,3 @@ export const navBookmarksIcon = document.querySelector(".nav-btn-bookmarks");
 export const navCartIcon = document.querySelector(".nav-btn-cart");
 export const navMenu = document.querySelector(".btn-nav");
 export const navContainer = document.querySelector(".nav");
-export const navx = document.querySelector(".nav__x");
