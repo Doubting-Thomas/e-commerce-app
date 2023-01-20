@@ -46,8 +46,8 @@
   }
 
   &__main {
-    background-color: rgba(255, 255, 255, 0.97);
-    color: black;
+    background-color: $color-primary;
+    color: $color-tertiary;
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@
 
   &__link:hover,
   &__link:active {
-    color: red;
+    transform: translateY(3px);
   }
 
   &__buttons {
@@ -104,7 +104,7 @@
     z-index: 500;
 
     &:hover {
-      fill: red;
+      fill: $color-primary-dark;
     }
   }
 
@@ -272,12 +272,10 @@
 }
 
 .nav__open .nav__mobile-nav[name="nav__close"] > svg {
-  //fill: black;
   display: block;
 }
 
 .nav__open .nav__mobile-nav[name="nav__outline"] {
-  //fill: green;
   display: none;
 }
 
