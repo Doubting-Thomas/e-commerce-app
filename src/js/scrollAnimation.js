@@ -5,11 +5,12 @@ export function renderAllSections() {
 
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("section--hidden");
+    observer.unobserve(entry.target);
   }
 
   const observer = new IntersectionObserver(displaySection, {
     root: null,
-    threshold: 0.10,
+    threshold: 0.1,
   });
   allSections.forEach(function (section) {
     observer.observe(section);
