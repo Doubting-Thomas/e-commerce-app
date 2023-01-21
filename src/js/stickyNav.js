@@ -1,4 +1,4 @@
-import { navContainer, header } from "./config";
+import { navContainer} from "./config";
 
 export function renderStickyNavbar() {
   const sectionHero = document.querySelector(".hero");
