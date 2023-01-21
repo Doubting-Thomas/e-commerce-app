@@ -2,11 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 5rem;
   width: 100%;
   padding: 0 2rem;
   background-color: $color-tertiary;
   color: $color-primary;
-  position: fixed;
+  //position: fixed;
 
   &__intro {
     display: flex;
@@ -132,6 +133,10 @@
 .hidden .nav-btn-cart {
   display: none;
 }
+
+// .nav .sticky {
+//   position: fixed;
+// }
 
 .btn-nav {
   display: block;

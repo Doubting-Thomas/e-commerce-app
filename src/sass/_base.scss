@@ -15,6 +15,13 @@ $color-tertiary-2: #000;
   box-sizing: inherit;
 }
 
+.sticky {
+  position: fixed;
+  //top: 0;
+  //bottom: 0;
+  //width: 100%;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;

@@ -1,3 +1,4 @@
+export const header = document.querySelector(".header");
 export const btnHero = document.querySelector(".btn--white");
 export const navBookmarksIcon = document.querySelector(".nav-btn-bookmarks");
 export const navCartIcon = document.querySelector(".nav-btn-cart");
