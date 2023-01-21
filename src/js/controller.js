@@ -1,5 +1,4 @@
-import { navMenu } from "./config";
-import { displayMobileNav, removeMobileNav } from "./mobileNav";
+import { displayMobileNav } from "./mobileNav";
 import { scrollAnimation } from "./smoothScroll";
 
 function init() {
