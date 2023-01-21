@@ -15,13 +15,6 @@ $color-tertiary-2: #000;
   box-sizing: inherit;
 }
 
-.sticky {
-  position: fixed;
-  //top: 0;
-  //bottom: 0;
-  //width: 100%;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -37,4 +30,17 @@ body {
   //background-color: $color-primary;
   color: $color-primary;
   overflow-x: hidden;
+}
+
+.sticky {
+  position: fixed;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
+.scroll {
+  transition: transform 1s, opacity 1s;
 }
