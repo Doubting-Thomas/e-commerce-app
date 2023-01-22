@@ -1,3 +1,5 @@
+// Functionality for revealing sections on scroll
+
 export function renderAllSections() {
   const allSections = document.querySelectorAll(".scroll");
   function displaySection(entries, observer) {

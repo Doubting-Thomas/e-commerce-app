@@ -1,5 +1,6 @@
 import { navContainer} from "./config";
 
+// Functionality for a sticky navigation bar
 export function renderStickyNavbar() {
   const sectionHero = document.querySelector(".hero");
   const navbarHeight = navContainer.getBoundingClientRect().height;
