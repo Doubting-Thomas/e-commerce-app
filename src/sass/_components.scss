@@ -82,6 +82,12 @@
       background-color: $color-primary-dark;
     }
   }
+
+  &--cart {
+    background-color: $color-primary;
+    color: $color-secondary;
+    text-align: center;
+  }
 }
 
 .hide .btn--white {
