@@ -1,8 +1,8 @@
-import { displayMobileNav } from "./mobileNav";
+import { displayMobileNav } from "./mobileNav.js";
 import { scrollAnimation } from "./smoothScroll";
 import { renderStickyNavbar } from "./stickyNav";
 import { renderAllSections } from "./scrollAnimation";
-import { renderCartDisplay, closeCartDisplay } from "./model";
+import { renderCartDisplay, closeCartDisplay } from "./model.js";
 
 function init() {
   displayMobileNav();

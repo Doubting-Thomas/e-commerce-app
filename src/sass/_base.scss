@@ -29,6 +29,10 @@ body {
   line-height: 1.6;
   color: $color-primary;
   overflow-x: hidden;
+
+  @media (min-width: 37.5em) {
+    width: 60rem;
+  }
 }
 
 .sticky {
