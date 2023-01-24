@@ -8,4 +8,3 @@ export const allSections = document.querySelectorAll(".scroll");
 export const cartDisplay = document.querySelector(".cart");
 export const cartContainer = document.querySelector(".cart__container");
 export const closeCart = document.querySelector(".btn-cart-close");
-console.log(navCartIcon);

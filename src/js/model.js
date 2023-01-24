@@ -4,7 +4,6 @@ export function renderCartDisplay() {
   navCartIcon.addEventListener("click", function () {
     cartDisplay.classList.toggle("transparent");
     cartContainer.classList.toggle("reveal");
-    console.log("togglers");
   });
 }
 
