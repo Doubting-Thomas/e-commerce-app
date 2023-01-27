@@ -1,4 +1,4 @@
-import { navContainer} from "./config";
+import { navContainer } from "./config";
 
 // Functionality for a sticky navigation bar
 export function renderStickyNavbar() {

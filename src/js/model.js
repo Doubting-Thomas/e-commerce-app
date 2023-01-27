@@ -1,4 +1,5 @@
 import { cartDisplay, cartContainer, closeCart, navCartIcon } from "./config";
+import { product } from "./products";
 // Functionality for the cart pop-up
 export function renderCartDisplay() {
   navCartIcon.addEventListener("click", function () {
