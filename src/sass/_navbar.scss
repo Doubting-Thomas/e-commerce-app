@@ -7,7 +7,6 @@
   padding: 0 2rem;
   background-color: $color-tertiary;
   color: $color-primary;
-  //position: fixed;
 
   &__intro {
     display: flex;
@@ -43,7 +42,6 @@
   &__menu-close > svg {
     height: 2rem;
     width: 2rem;
-    //fill: $color-primary;
   }
 
   &__main {
@@ -133,10 +131,6 @@
 .hidden .nav-btn-cart {
   display: none;
 }
-
-// .nav .sticky {
-//   position: fixed;
-// }
 
 .btn-nav {
   display: block;

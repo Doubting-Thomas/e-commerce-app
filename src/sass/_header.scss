@@ -2,7 +2,6 @@
   padding: 10rem 5rem;
   color: $color-secondary;
   height: 95vh;
-  //width: 200%;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary, 0.7),
@@ -12,12 +11,6 @@
 
   background-size: cover;
   background-position: top;
-
-  // @media (min-width: 56.25em) {
-  //   body {
-  //     width: 90rem;
-  //   }
-  // }
 
   &__text-box {
     text-transform: uppercase;
