@@ -32,11 +32,8 @@ export default class RenderCart {
     </div>
     `;
     });
-    console.log(markup);
     productsMarkup.innerHTML = markup;
-    console.log(productsMarkup);
   }
 }
 //export default new RenderCart();
 export const displayCart = new RenderCart();
-console.log(displayCart);
