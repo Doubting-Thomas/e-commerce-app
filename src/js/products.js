@@ -1,64 +1,65 @@
-export const product = [
+export const items = [
   {
     id: 1,
     name: "Analogue Blur Chrome Classic",
     price: 160,
-    image: "./src/img/analogue-blur-chrome-classic.jpg",
+    image: "/analogue-blur-chrome-classic.f2582246.jpg",
   },
 
   {
     id: 2,
     name: "Black Citizen Analogue Watch",
     price: 160,
-    image: "./src/img/black-citizen-analog-watch.jpg",
+    image: "/black-citizen-analog-watch.e6183e88.jpg",
   },
 
   {
     id: 3,
     name: "Black Lowtop Sneakers",
     price: 160,
-    image: "./src/img/black-lowtop-sneakers.jpg.jpg",
+    image: "/black-lowtop-sneakers.838fcdb2.jpg",
   },
 
   {
     id: 4,
     name: "Leather Bag",
     price: 160,
-    image: "./src/img/leather-bag.jpg",
+    image: "/leather-bag.bb574df0.jpg",
   },
 
   {
     id: 5,
     name: "Nike Shoes",
     price: 160,
-    image: "./src/img/nike-shoes.jpg",
+    //image: "./src/img/nike-shoes.jpg",
+    image: "/nike-shoes.1f5cdbc6.jpg",
   },
 
   {
     id: 6,
     name: "Paper Bag",
     price: 160,
-    image: "./src/img/paper-bag.jpg",
+    image: "/paper-bag.ad7d6752.jpg",
   },
 
   {
     id: 7,
     name: "Running Shoes",
     price: 160,
-    image: "./src/img/running-shoes.jpg",
+    image: "/running-shoes.366da1a6.jpg",
   },
 
   {
     id: 8,
     name: "Satchel Bag",
     price: 160,
-    image: "./src/img/satchel-bag.jpg",
+    image: "/satchel-bag.9cda168c.jpg",
   },
 
   {
     id: 9,
     name: "Silver Chronograph Watch",
     price: 160,
-    image: "./src/img/silver-chronograph-watch.jpg",
+    image: "/silver-chronograph-watch.1ce07153.jpg",
   },
 ];
