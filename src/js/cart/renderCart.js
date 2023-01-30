@@ -1,11 +1,12 @@
 import { items } from "../products";
 import { productsMarkup } from "../config";
 
+export let markup = "";
 // Display all products in the app
 export default class RenderCart {
   renderProducts() {
     console.log(items);
-    let markup = "";
+    // let markup = "";
 
     items.forEach(function (item) {
       markup += `
@@ -37,3 +38,16 @@ export default class RenderCart {
 }
 //export default new RenderCart();
 export const displayCart = new RenderCart();
+
+// class addProducts {
+//   // constructor() {
+//   //   this.RenderCarts = new RenderCart();
+//   // }
+
+//   addCarts() {
+//     // this.RenderCarts.renderProducts;
+
+//     console.log(markup);
+//   }
+// }
+// export const addBag = new addProducts();
