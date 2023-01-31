@@ -1,8 +1,10 @@
 import { items } from "../products";
 import { productsMarkup } from "../config";
+import { btnProducts } from "../config";
 
 export let markup = "";
 // Display all products in the app
+
 export default class RenderCart {
   renderProducts() {
     console.log(items);
@@ -51,3 +53,5 @@ export const displayCart = new RenderCart();
 //   }
 // }
 // export const addBag = new addProducts();
+
+//<button class="btn btn--products" data-id="${item.id}">Add to Cart</button>
