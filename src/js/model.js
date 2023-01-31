@@ -1,25 +1,5 @@
 import { cartDisplay, cartContainer, closeCart, navCartIcon } from "./config";
 import { items } from "./products";
-console.log(items);
-
-// export const state = {
-//   cart: {},
-// }
-
-// const dataList = {
-//   image: [],
-//   title: [],
-//   publisher: [],
-//   socialRank: [],
-// };
-// let recipe = data.recipes;
-// recipe.forEach(function (meals) {
-//   dataList.image.push(meals.image_url);
-//   dataList.title.push(meals.title);
-//   dataList.publisher.push(meals.publisher);
-//   dataList.socialRank.push(meals.social_rank);
-// });
-// console.log(dataList);
 
 // export let cart = {
 //   id: "",
@@ -74,13 +54,6 @@ console.log(items);
 // });
 
 export let cart = [];
-
-//console.log(cart);
-
-//console.log(cart);
-
-// let cartItemName = items;
-// console.log(cartItemName);
 
 // Functionality for the cart pop-up
 export function renderCartDisplay() {
