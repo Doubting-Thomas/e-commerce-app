@@ -1,10 +1,7 @@
 import { btnProducts } from "../config.js";
-import { items } from "../products";
 import RenderCart from "./renderCart";
-//import { markup } from "./renderCart";
-import { cart, state, products } from "../model.js";
+import { cart } from "../model.js";
 import { cartInfo } from "../config.js";
-import { btnHero } from "../config.js";
 
 class addProducts extends RenderCart {
   addHandlerRender() {
