@@ -78,5 +78,5 @@ export function closeCartDisplay() {
 
 // Functionality to display cart number when adding items to cart
 export function renderCartCount() {
-  cartCount.classList.toggle("hidden");
+  cartCount.classList.remove("hidden");
 }
