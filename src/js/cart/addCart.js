@@ -14,7 +14,6 @@ export function addCart() {
         let imgSrc =
           e.target.parentElement.firstChild.nextElementSibling.firstChild
             .nextElementSibling.src;
-        //console.log(imgSrc);
 
         // Get the position of the image
         let imgPath = imgSrc.slice(21);
@@ -23,7 +22,6 @@ export function addCart() {
         let cartItemName =
           e.target.parentElement.firstChild.nextElementSibling
             .nextElementSibling.nextElementSibling.textContent;
-        //console.log(cartItemName);
         cart.name = cartItemName;
 
         let cartItemValue =
@@ -52,8 +50,7 @@ export function addCart() {
             </div>
           </div>
         `;
-        //console.log(markup);
-        //cartInfo.insertAdjacentHTML("afterbegin", markup);
+
         cartInfo.appendChild(markup);
         // Update the total count
         cartTotal();
@@ -61,35 +58,4 @@ export function addCart() {
     });
   });
 }
-// const cartName = document.querySelectorAll(".cart__title");
-// console.log(cartName);
-// export function cartTotal() {
-//   const cartValue = [];
-//   const cartProductPrice = document.querySelectorAll(".cart__price");
-//   //console.log(cartProductPrice);
 
-//   cartProductPrice.forEach(function (price) {
-//     //console.log(price.textContent);
-//     cartValue.push(parseInt(price.textContent));
-//     console.log(cartValue);
-
-//     const cartTotalValue = cartValue.reduce(function (sum, product) {
-//       sum += product;
-//       return sum;
-//     }, 0);
-//     console.log(cartTotalValue);
-
-//     cartTotalPrice.textContent = cartTotalValue;
-//     cartCount.textContent = cartValue.length;
-//   });
-// }
-
-// export function cartTotal() {
-//   cartProductPrice.forEach(function (product) {
-//     //cartValue.push(parseInt(product.textContent));
-//     console.log(product);
-//   });
-// }
-// cartTotal();
-
-//export const addCartItem = new addProducts();
