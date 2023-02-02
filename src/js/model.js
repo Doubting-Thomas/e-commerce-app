@@ -1,4 +1,10 @@
-import { cartDisplay, cartContainer, closeCart, navCartIcon } from "./config";
+import {
+  cartDisplay,
+  cartContainer,
+  closeCart,
+  navCartIcon,
+  cartCount,
+} from "./config";
 import { items } from "./products";
 
 // export let cart = {
@@ -55,7 +61,7 @@ import { items } from "./products";
 
 export let cart = [];
 
-// Functionality for the cart pop-up
+// Functionality for the cart container pop-up
 export function renderCartDisplay() {
   navCartIcon.addEventListener("click", function () {
     cartDisplay.classList.toggle("transparent");
@@ -68,4 +74,9 @@ export function closeCartDisplay() {
     cartDisplay.classList.remove("transparent");
     cartContainer.classList.remove("reveal");
   });
+}
+
+// Functionality to display cart number when adding items to cart
+export function renderCartCount() {
+  cartCount.classList.toggle("hidden");
 }
