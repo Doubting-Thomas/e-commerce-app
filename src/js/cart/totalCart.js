@@ -5,7 +5,7 @@ import {
   cartTotalPrice,
 } from "../config";
 import { cart, renderCartCount } from "../model.js";
-import { addCart } from "./addCart";
+import { addCart, button } from "./addCart";
 
 export function cartTotal() {
   const cartValue = [];
