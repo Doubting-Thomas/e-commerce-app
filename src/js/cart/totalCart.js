@@ -1,11 +1,8 @@
 import {
   cartCount,
-  //cartName,
-  cartProductPrice,
   cartTotalPrice,
 } from "../config";
-import { cart, renderCartCount } from "../model.js";
-import { addCart, button } from "./addCart";
+import { renderCartCount } from "../model.js";
 
 export function cartTotal() {
   const cartValue = [];
