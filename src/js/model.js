@@ -5,23 +5,8 @@ import {
   navCartIcon,
   cartCount,
 } from "./config";
-import { items } from "./products";
 import { cartInfo } from "./config";
 import { removeCartItems } from "./cart/removeCart";
-
-// export let cart = {
-//   id: "",
-//   name: "",
-//   price: "",
-//   image: "",
-// };
-
-// items.forEach(function (item) {
-//   cart.id = item.id;
-//   cart.name = item.name;
-//   cart.price = item.price;
-//   cart.image = item.image;
-// });
 
 // export let cart = {
 //   id: [],
