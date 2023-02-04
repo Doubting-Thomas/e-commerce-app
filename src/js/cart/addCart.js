@@ -1,9 +1,7 @@
-import { btnClearCart, btnProducts } from "../config.js";
+import { btnProducts } from "../config.js";
 import { cart } from "../model.js";
 import { cartInfo } from "../config.js";
 import { cartTotal } from "./totalCart.js";
-import { removeCartItems } from "./removeCart.js";
-import { clearCartItems } from "./clearCart.js";
 
 export function addCart() {
   btnProducts.forEach(function (btn) {
