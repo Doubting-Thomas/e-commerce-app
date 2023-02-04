@@ -7,6 +7,8 @@ import { displayCart } from "./cart/renderCart.js";
 import addProducts, { addCart, addCartItem } from "./cart/addCart.js";
 import RenderCart from "./cart/renderCart.js";
 import { cartNames, cartTotal } from "./cart/totalCart.js";
+import { btnClearCart } from "./config.js";
+import { clearCartItems } from "./cart/clearCart.js";
 
 function init() {
   displayMobileNav();
@@ -30,3 +32,7 @@ function init() {
   //displayCart.renderProducts();
 }
 init();
+
+btnClearCart.addEventListener("click", function () {
+  clearCartItems();
+});

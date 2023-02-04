@@ -5,7 +5,6 @@ import { cartTotal } from "./totalCart.js";
 import { removeCartItems } from "./removeCart.js";
 import { clearCartItems } from "./clearCart.js";
 
-
 export function addCart() {
   btnProducts.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
@@ -83,10 +82,6 @@ export function cartMarkup() {
 
   cartInfo.appendChild(markup);
 }
-
-btnClearCart.addEventListener("click", function () {
-  clearCartItems();
-});
 
 cartInfo.addEventListener("click", function (event) {
   if (event.target.classList.contains("cart__delete")) {
