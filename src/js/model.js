@@ -6,6 +6,8 @@ import {
   cartCount,
 } from "./config";
 import { items } from "./products";
+import { cartInfo } from "./config";
+import { removeCartItems } from "./cart/removeCart";
 
 // export let cart = {
 //   id: "",
@@ -80,3 +82,16 @@ export function closeCartDisplay() {
 export function renderCartCount() {
   cartCount.classList.remove("hidden");
 }
+
+// Functionality to delete cart items
+cartInfo.addEventListener("click", function (event) {
+  if (event.target.classList.contains("cart__delete")) {
+    let deleteItem = event.target;
+    console.log(deleteItem);
+    let id = deleteItem.dataset.id;
+    console.log(id);
+    removeCartItems(id);
+
+    cartInfo.removeChild(cartInfo.firstElementChild);
+  }
+});

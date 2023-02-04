@@ -82,15 +82,3 @@ export function cartMarkup() {
 
   cartInfo.appendChild(markup);
 }
-
-cartInfo.addEventListener("click", function (event) {
-  if (event.target.classList.contains("cart__delete")) {
-    let deleteItem = event.target;
-    console.log(deleteItem);
-    let id = deleteItem.dataset.id;
-    console.log(id);
-    removeCartItems(id);
-
-    cartInfo.removeChild(cartInfo.firstElementChild);
-  }
-});
