@@ -1,6 +1,7 @@
 import { cart } from "../model";
-import { cartInfo } from "../config";
+import { cartCount, cartInfo, cartTotalPrice } from "../config";
 import { removeCartItems } from "./removeCart";
+import { cartTotal } from "./totalCart";
 
 export function clearCartItems() {
   let items = cart.map(function (item) {
@@ -14,4 +15,7 @@ export function clearCartItems() {
   while (cartInfo.children.length > 0) {
     cartInfo.removeChild(cartInfo.children[0]);
   }
+
+  cartCount.textContent = "";
+  cartTotalPrice.textContent = "";
 }
