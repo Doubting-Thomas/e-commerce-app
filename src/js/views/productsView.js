@@ -5,6 +5,7 @@ import { cart } from "../model";
 
 // Assign the function to the window to use the onclick function
 window.addCartProducts = addCartProducts;
+window.updateUnits = updateUnits;
 
 export function renderProducts() {
   items.forEach(function (item) {
@@ -66,7 +67,8 @@ export function renderProducts() {
 
 function addCartProducts(id) {
   if (cart.some((product) => product.id === id)) {
-    alert("Already added to cart");
+    console.log("Already added to cart");
+    return;
   } else {
     const product = items.find((item) => item.id === id);
     //console.log(id);
@@ -74,17 +76,20 @@ function addCartProducts(id) {
     // console.log(product.id);
     cart.push({
       ...product,
-      units: 1,
+      //units: 1,
     });
     console.log(cart);
+    // console.log(cart.units);
+    // console.log(product.units);
   }
 
-  cartMarkup();
+  updateCartView();
 }
 
 export function cartMarkup() {
   // const markup = document.createElement("div");
   // markup.classList.add("cart__items");
+  cartInfo.innerHTML = "";
   cart.forEach((product) => {
     cartInfo.innerHTML = `
         <div class="cart__items u-margin-bottom-sm">
@@ -95,7 +100,7 @@ export function cartMarkup() {
               <span class="cart__delete" data-id=${product.id}>Delete</span>
             </div>
             <div>
-              <button class="nav__btn btn-cart-close">
+              <button class="nav__btn btn-cart-close" onclick="updateUnits('increase', ${product.id})">
                 <span class="cart__icon" data-id="${product.id}">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path
@@ -104,9 +109,9 @@ export function cartMarkup() {
                   </svg>
                 </span>
               </button>
-              <p class="cart__amount">${product.units}</p>
-              <button class="nav__btn btn-cart-close">
-                <span class="cart__icon" data-id="${product.id}">
+              <div class="cart__amount">${product.units}</div>
+              <button class="nav__btn btn-cart-close" onclick="updateUnits('decrease', ${product.id})">
+                <span class="cart__icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path
                       d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
@@ -119,3 +124,56 @@ export function cartMarkup() {
         `;
   });
 }
+
+export function updateCartView() {
+  cartMarkup();
+}
+
+// Update cart amount
+export function updateUnits(action, id) {
+  cart = cart.map((product) => {
+    //let updatedUnits = product.units;
+
+    //let num = 5;
+    // num = num + 1;
+    // console.log(num);
+
+    if (product.id === id) {
+      if (action === "increase") {
+        //updatedUnits++;
+        //updatedUnits += 15;
+        product.units++;
+        console.log(product.units);
+        //cartMarkup();
+        //cartUnitAmount.textContent = 5;
+        console.log("yes");
+      } else if (action === "decrease") {
+        //updatedUnits--;
+        product.units--;
+        //updatedUnits -= 15;
+        console.log(product.units);
+        //cartMarkup();
+        //cartUnitAmount.textContent = 4;
+        //console.log("no");
+      }
+    }
+    return {
+      ...product,
+      units: product.units,
+    };
+    //console.log(product.units);
+    //cartMarkup();
+  });
+
+  updateCartView();
+}
+
+let num = 5;
+num += 5;
+console.log(num);
+// onclick="updateUnits('decrease', ${product.id})
+
+// const btnTest = document.querySelector('.tester');
+// btnTest.addEventListener('click', function () {
+//   console.log('does it')
+// })
