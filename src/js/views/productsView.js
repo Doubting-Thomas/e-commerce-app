@@ -35,52 +35,17 @@ export function renderProducts() {
   });
 }
 
-// Add to cart
-// function addToCart(id) {
-//   // Check if product exists in the cart
-//   if (
-//     cart.some(function (item) {
-//       item.id === id;
-//     })
-//   ) {
-//     alert("Item already in cart!");
-//     // If you want to increase the number in the cart though
-//     changeNumberOfUnits("plus", id);
-//   } else {
-//     // Find the product that has the id clicked on
-//     const item = products.find(function (product) {
-//       product.id === id;
-//     });
-//     console.log(item);
-
-//     // Push the item into the cart and add a new property
-//     // For the number of units
-//     cart.push({
-//       ...item,
-//       numberOfUnits: 1,
-//     });
-
-//     // Update the cart count and cart total
-//     updateCart();
-//   }
-// }
-
 function addCartProducts(id) {
   if (cart.some((product) => product.id === id)) {
     console.log("Already added to cart");
     return;
   } else {
     const product = items.find((item) => item.id === id);
-    //console.log(id);
-    //console.log(product);
-    // console.log(product.id);
     cart.push({
       ...product,
       //units: 1,
     });
     console.log(cart);
-    // console.log(cart.units);
-    // console.log(product.units);
   }
 
   updateCartView();
@@ -134,46 +99,18 @@ export function updateUnits(action, id) {
   cart = cart.map((product) => {
     //let updatedUnits = product.units;
 
-    //let num = 5;
-    // num = num + 1;
-    // console.log(num);
-
     if (product.id === id) {
       if (action === "increase") {
-        //updatedUnits++;
-        //updatedUnits += 15;
         product.units++;
-        console.log(product.units);
-        //cartMarkup();
-        //cartUnitAmount.textContent = 5;
-        console.log("yes");
       } else if (action === "decrease") {
-        //updatedUnits--;
         product.units--;
-        //updatedUnits -= 15;
-        console.log(product.units);
-        //cartMarkup();
-        //cartUnitAmount.textContent = 4;
-        //console.log("no");
       }
     }
     return {
       ...product,
       units: product.units,
     };
-    //console.log(product.units);
-    //cartMarkup();
   });
 
   updateCartView();
 }
-
-let num = 5;
-num += 5;
-console.log(num);
-// onclick="updateUnits('decrease', ${product.id})
-
-// const btnTest = document.querySelector('.tester');
-// btnTest.addEventListener('click', function () {
-//   console.log('does it')
-// })
