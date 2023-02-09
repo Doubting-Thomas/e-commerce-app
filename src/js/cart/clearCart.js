@@ -17,7 +17,5 @@ export function clearCartItems() {
     cartInfo.removeChild(cartInfo.children[0]);
   }
 
-  // cartCount.textContent = "";
-  // cartTotalPrice.textContent = "";
   updateCartView();
 }
