@@ -1,9 +1,7 @@
 import { items } from "../products";
 import { cartInfo, productsMarkup } from "../config";
-import { btnProducts } from "../config";
 import { cart } from "../model";
 import { cartCount, cartTotalPrice } from "../config";
-//import { removeCartItems } from "../cart/removeCart";
 
 // Assign the function to the window to use the onclick function
 window.addCartProducts = addCartProducts;
@@ -134,36 +132,7 @@ export function cartTotal() {
   cartCount.textContent = cartItems;
 }
 
-// export function removeCartItems(id) {
-//   cart = cart.filter((product) => {
-//     product.id !== id;
-//   });
-//   console.log(id);
-
-//   updateCartView();
-// }
 export function removeCartProducts(id) {
-  // const product = items.find((item) => item.id === id);
-  //   cart.push({
-  //     ...product,
-  //     //units: 1,
-  //   });
-
-  // cart = cart.filter((item) => {
-  //   item.id !== id;
-  //   console.log(id);
-  //   // cart.splice(item, 1);
-  // });
-
-  // Define variable for finding the bookmark
-  // const index = state.bookmarks.findIndex(el => el.id === id);
-  // // Delete bookmark
-  // state.bookmarks.splice(index, 1);
-
-  // cart = cart.filter(function (product) {
-  //   product.id !== id;
-  //   //product.units++;
-  // });
   const index = cart.findIndex((product) => {
     product.id === id;
     console.log(id);
@@ -173,28 +142,3 @@ export function removeCartProducts(id) {
 
   updateCartView();
 }
-
-// cartInfo.addEventListener("click", function (event) {
-//   if (event.target.classList.contains("cart__delete")) {
-//     // let deleteItem = event.target;
-//     // //console.log(deleteItem);
-//     // let id = deleteItem.dataset.id;
-//     //console.log(id);
-//     //removeCartItems();
-
-//     cartInfo.splice(cartInfo.firstElementChild);
-//     console.log(cartInfo.firstElementChild);
-//     updateCartView();
-//   }
-// });
-
-// function removeCartItems(id) {
-//   cart = cart.flatMap((item) => {
-//     if (item.id !== id) {
-//       console.log(id);
-//       //console.log(cart);
-//       return [];
-//     }
-//   });
-// }
-//console.log(cart)
