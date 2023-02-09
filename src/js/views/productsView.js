@@ -2,10 +2,13 @@ import { items } from "../products";
 import { cartInfo, productsMarkup } from "../config";
 import { btnProducts } from "../config";
 import { cart } from "../model";
+import { cartCount, cartTotalPrice } from "../config";
+//import { removeCartItems } from "../cart/removeCart";
 
 // Assign the function to the window to use the onclick function
 window.addCartProducts = addCartProducts;
 window.updateUnits = updateUnits;
+window.removeCartProducts = removeCartProducts;
 
 export function renderProducts() {
   items.forEach(function (item) {
@@ -38,6 +41,7 @@ export function renderProducts() {
 function addCartProducts(id) {
   if (cart.some((product) => product.id === id)) {
     console.log("Already added to cart");
+    //updateUnits('increase', id)
     return;
   } else {
     const product = items.find((item) => item.id === id);
@@ -56,17 +60,17 @@ export function cartMarkup() {
   // markup.classList.add("cart__items");
   cartInfo.innerHTML = "";
   cart.forEach((product) => {
-    cartInfo.innerHTML = `
+    cartInfo.innerHTML += `
         <div class="cart__items u-margin-bottom-sm">
             <img src="${product.image}" class="cart__image" alt="cart-image" />
             <div>
               <h4 class="cart__title">${product.name}</h4>
               <h5><span>$</span> <span class="cart__price">${product.price}</span></h5>
-              <span class="cart__delete" data-id=${product.id}>Delete</span>
+              <span class="cart__delete" onclick="removeCartProducts(${product.id})">Delete</span>
             </div>
             <div>
               <button class="nav__btn btn-cart-close" onclick="updateUnits('increase', ${product.id})">
-                <span class="cart__icon" data-id="${product.id}">
+                <span class="cart__icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path
                       d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
@@ -92,6 +96,7 @@ export function cartMarkup() {
 
 export function updateCartView() {
   cartMarkup();
+  cartTotal();
 }
 
 // Update cart amount
@@ -102,7 +107,7 @@ export function updateUnits(action, id) {
     if (product.id === id) {
       if (action === "increase") {
         product.units++;
-      } else if (action === "decrease") {
+      } else if (action === "decrease" && product.units > 1) {
         product.units--;
       }
     }
@@ -114,3 +119,82 @@ export function updateUnits(action, id) {
 
   updateCartView();
 }
+
+// Update the cart total
+export function cartTotal() {
+  let cartPrice = 0;
+  let cartItems = 0;
+
+  cart.forEach((product) => {
+    cartPrice += product.price * product.units;
+    cartItems += product.units;
+  });
+
+  cartTotalPrice.textContent = cartPrice;
+  cartCount.textContent = cartItems;
+}
+
+// export function removeCartItems(id) {
+//   cart = cart.filter((product) => {
+//     product.id !== id;
+//   });
+//   console.log(id);
+
+//   updateCartView();
+// }
+export function removeCartProducts(id) {
+  // const product = items.find((item) => item.id === id);
+  //   cart.push({
+  //     ...product,
+  //     //units: 1,
+  //   });
+
+  // cart = cart.filter((item) => {
+  //   item.id !== id;
+  //   console.log(id);
+  //   // cart.splice(item, 1);
+  // });
+
+  // Define variable for finding the bookmark
+  // const index = state.bookmarks.findIndex(el => el.id === id);
+  // // Delete bookmark
+  // state.bookmarks.splice(index, 1);
+
+  // cart = cart.filter(function (product) {
+  //   product.id !== id;
+  //   //product.units++;
+  // });
+  const index = cart.findIndex((product) => {
+    product.id === id;
+    console.log(id);
+  });
+
+  cart.splice(index, 1);
+
+  updateCartView();
+}
+
+// cartInfo.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("cart__delete")) {
+//     // let deleteItem = event.target;
+//     // //console.log(deleteItem);
+//     // let id = deleteItem.dataset.id;
+//     //console.log(id);
+//     //removeCartItems();
+
+//     cartInfo.splice(cartInfo.firstElementChild);
+//     console.log(cartInfo.firstElementChild);
+//     updateCartView();
+//   }
+// });
+
+// function removeCartItems(id) {
+//   cart = cart.flatMap((item) => {
+//     if (item.id !== id) {
+//       console.log(id);
+//       //console.log(cart);
+//       return [];
+//     }
+//   });
+// }
+//console.log(cart)
