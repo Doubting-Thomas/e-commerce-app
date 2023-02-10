@@ -1,8 +1,6 @@
 import { cart } from "../model";
 import { cartTotalPrice } from "../../config";
 import { cartCount } from "../../config";
-//import { updateCartView } from "../../views/productsView";
-//import { updateCartView } from "../model/cart/updateCart";
 import { updateCartView } from "./updateCart";
 
 //Update cart amount

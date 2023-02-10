@@ -1,7 +1,5 @@
-//import { cart, hideCartCount } from "../../model";
-import { cartCount, cartInfo, cartTotalPrice } from "../../config";
-//import { removeCartProducts } from "../../views/productsView";
-//import { updateCartView } from "../../views/productsView";
+
+import { cartInfo } from "../../config";
 import { cart } from "../model";
 import { removeCartProducts } from "./removeCart";
 import { updateCartView } from "./updateCart";

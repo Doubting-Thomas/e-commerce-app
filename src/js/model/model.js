@@ -1,54 +1,6 @@
-import {
-  cartDisplay,
-  cartContainer,
-  closeCart,
-  navCartIcon,
-  cartInfo,
-} from "../config";
-import { cartInfo } from "../config";
-//import { removeCartItems } from "./views/productsView";
-//import { updateCartView } from "./views/productsView";
+import { cartDisplay, cartContainer, closeCart, navCartIcon } from "../config";
 import { updateCartView } from "./cart/updateCart";
 
-// export let cart = {
-//   id: [],
-//   name: [],
-//   price: [],
-//   image: [],
-// };
-
-// export let cart = {
-//   id: "",
-//   name: "",
-//   price: "",
-//   image: "",
-// };
-
-//export let products = items;
-
-// products.forEach(function (item) {
-//   cart.id.push(item.id);
-//   cart.name.push(item.name)
-//   cart.price.push(item.price)
-//   cart.image.push(item.image)
-//   // cart.id = item.id;
-//   // cart.name = item.name;
-//   // cart.price = item.price;
-//   // cart.image = item.image;
-// });
-
-// products.forEach(function (item) {
-//   cart.id.push(item.id);
-//   cart.name.push(item.name);
-//   cart.price.push(item.price);
-//   cart.image.push(item.image);
-//   //cart.id = item.id;
-//   //cart.name = item.name;
-//   // cart.price = item.price;
-//   // cart.image = item.image;
-// });
-
-//export let cart = [];
 export let cart = JSON.parse(localStorage.getItem("Cart")) || [];
 updateCartView();
 
@@ -75,17 +27,3 @@ export function closeCartDisplay() {
 // export function hideCartCount() {
 //   cartCount.classList.add('hidden')
 // }
-
-// Functionality to delete cart items
-// cartInfo.addEventListener("click", function (event) {
-//   if (event.target.classList.contains("cart__delete")) {
-//     let deleteItem = event.target;
-//     //console.log(deleteItem);
-//     let id = deleteItem.dataset.id;
-//     //console.log(id);
-//     removeCartItems(id);
-
-//     cartInfo.removeChild(cartInfo.firstElementChild);
-//     updateCartView();
-//   }
-// });

@@ -14,7 +14,6 @@ function init() {
   //renderAllSections();
   renderCartDisplay();
   closeCartDisplay();
-  //addCart();
   renderProducts();
 }
 init();

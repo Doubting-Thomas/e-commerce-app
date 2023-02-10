@@ -1,11 +1,10 @@
-//import { cart } from "../model";
 import { cartInfo } from "../config";
 import { cart } from "../model/model";
 import { addCartProducts } from "../model/cart/addCart.js";
 import { updateUnits } from "../model/cart/totalCart.js";
 import { removeCartProducts } from "../model/cart/removeCart.js";
-//../../views/productsView
 
+// Assign the function to the window to use the onclick function
 window.addCartProducts = addCartProducts;
 window.updateUnits = updateUnits;
 window.removeCartProducts = removeCartProducts;
