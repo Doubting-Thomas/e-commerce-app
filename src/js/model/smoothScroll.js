@@ -1,4 +1,4 @@
-import { navContainer, pageLinks } from "./config";
+import { navContainer, pageLinks } from "../config";
 
 // Functionality for smooth scrolling
 export function scrollAnimation() {

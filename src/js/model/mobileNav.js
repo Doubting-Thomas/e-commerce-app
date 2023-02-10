@@ -4,7 +4,7 @@ import {
   btnHero,
   navCartIcon,
   navBookmarksIcon,
-} from "./config";
+} from "../config";
 
 // Functionality for the menu navigation
 export function displayMobileNav() {

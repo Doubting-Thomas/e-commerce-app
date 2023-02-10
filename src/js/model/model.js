@@ -3,10 +3,12 @@ import {
   cartContainer,
   closeCart,
   navCartIcon,
-  cartCount,
-} from "./config";
-import { cartInfo } from "./config";
-import { removeCartItems } from "./cart/removeCart";
+  cartInfo,
+} from "../config";
+import { cartInfo } from "../config";
+//import { removeCartItems } from "./views/productsView";
+//import { updateCartView } from "./views/productsView";
+import { updateCartView } from "./cart/updateCart";
 
 // export let cart = {
 //   id: [],
@@ -46,7 +48,9 @@ import { removeCartItems } from "./cart/removeCart";
 //   // cart.image = item.image;
 // });
 
-export let cart = [];
+//export let cart = [];
+export let cart = JSON.parse(localStorage.getItem("Cart")) || [];
+updateCartView();
 
 // Functionality for the cart container pop-up
 export function renderCartDisplay() {
@@ -64,19 +68,24 @@ export function closeCartDisplay() {
 }
 
 // Functionality to display cart number when adding items to cart
-export function renderCartCount() {
-  cartCount.classList.remove("hidden");
-}
+// export function renderCartCount() {
+//   cartCount.classList.remove("hidden");
+// }
+
+// export function hideCartCount() {
+//   cartCount.classList.add('hidden')
+// }
 
 // Functionality to delete cart items
-cartInfo.addEventListener("click", function (event) {
-  if (event.target.classList.contains("cart__delete")) {
-    let deleteItem = event.target;
-    console.log(deleteItem);
-    let id = deleteItem.dataset.id;
-    console.log(id);
-    removeCartItems(id);
+// cartInfo.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("cart__delete")) {
+//     let deleteItem = event.target;
+//     //console.log(deleteItem);
+//     let id = deleteItem.dataset.id;
+//     //console.log(id);
+//     removeCartItems(id);
 
-    cartInfo.removeChild(cartInfo.firstElementChild);
-  }
-});
+//     cartInfo.removeChild(cartInfo.firstElementChild);
+//     updateCartView();
+//   }
+// });

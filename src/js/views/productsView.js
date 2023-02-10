@@ -1,12 +1,10 @@
 import { items } from "../products";
 import { cartInfo, productsMarkup } from "../config";
-import { cart } from "../model";
-import { cartCount, cartTotalPrice } from "../config";
-
-// Assign the function to the window to use the onclick function
-window.addCartProducts = addCartProducts;
-window.updateUnits = updateUnits;
-window.removeCartProducts = removeCartProducts;
+import { cart } from "../model/model";
+// // Assign the function to the window to use the onclick function
+// window.addCartProducts = addCartProducts;
+// window.updateUnits = updateUnits;
+// window.removeCartProducts = removeCartProducts;
 
 export function renderProducts() {
   items.forEach(function (item) {
@@ -36,109 +34,134 @@ export function renderProducts() {
   });
 }
 
-function addCartProducts(id) {
-  if (cart.some((product) => product.id === id)) {
-    console.log("Already added to cart");
-    //updateUnits('increase', id)
-    return;
-  } else {
-    const product = items.find((item) => item.id === id);
-    cart.push({
-      ...product,
-      //units: 1,
-    });
-    console.log(cart);
-  }
+// export function addCartProducts(id) {
+//   if (cart.some((product) => product.id === id)) {
+//     console.log("Already added to cart");
+//     //updateUnits("increase", id);
+//     return;
+//   } else {
+//     const product = items.find((item) => item.id === id);
+//     cart.push({
+//       ...product,
+//       //units: 1,
+//     });
+//     console.log(cart);
+//   }
 
-  updateCartView();
-}
+//   updateCartView();
+// }
 
-export function cartMarkup() {
-  // const markup = document.createElement("div");
-  // markup.classList.add("cart__items");
-  cartInfo.innerHTML = "";
-  cart.forEach((product) => {
-    cartInfo.innerHTML += `
-        <div class="cart__items u-margin-bottom-sm">
-            <img src="${product.image}" class="cart__image" alt="cart-image" />
-            <div>
-              <h4 class="cart__title">${product.name}</h4>
-              <h5><span>$</span> <span class="cart__price">${product.price}</span></h5>
-              <span class="cart__delete" onclick="removeCartProducts(${product.id})">Delete</span>
-            </div>
-            <div>
-              <button class="nav__btn btn-cart-close" onclick="updateUnits('increase', ${product.id})">
-                <span class="cart__icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                      d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <div class="cart__amount">${product.units}</div>
-              <button class="nav__btn btn-cart-close" onclick="updateUnits('decrease', ${product.id})">
-                <span class="cart__icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                      d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
-        `;
-  });
-}
+// export function cartMarkup() {
+//   cartInfo.innerHTML = "";
+//   cart.forEach((product) => {
+//     cartInfo.innerHTML += `
+//         <div class="cart__items u-margin-bottom-sm">
+//             <img src="${product.image}" class="cart__image" alt="cart-image" />
+//             <div>
+//               <h4 class="cart__title">${product.name}</h4>
+//               <h5><span>$</span> <span class="cart__price">${product.price}</span></h5>
+//               <span class="cart__delete" onclick="removeCartProducts(${product.id})">Delete</span>
+//             </div>
+//             <div>
+//               <button class="nav__btn btn-cart-close" onclick="updateUnits('increase', ${product.id})">
+//                 <span class="cart__icon">
+//                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+//                     <path
+//                       d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+//                     />
+//                   </svg>
+//                 </span>
+//               </button>
+//               <div class="cart__amount">${product.units}</div>
+//               <button class="nav__btn btn-cart-close" onclick="updateUnits('decrease', ${product.id})">
+//                 <span class="cart__icon">
+//                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+//                     <path
+//                       d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+//                     />
+//                   </svg>
+//                 </span>
+//               </button>
+//             </div>
+//           </div>
+//         `;
+//   });
+// }
 
-export function updateCartView() {
-  cartMarkup();
-  cartTotal();
-}
+// export function updateCartView() {
+//   cartMarkup();
+//   cartTotal();
 
-// Update cart amount
-export function updateUnits(action, id) {
-  cart = cart.map((product) => {
-    //let updatedUnits = product.units;
+//   localStorage.setItem("Cart", JSON.stringify(cart));
+// }
 
-    if (product.id === id) {
-      if (action === "increase") {
-        product.units++;
-      } else if (action === "decrease" && product.units > 1) {
-        product.units--;
-      }
-    }
-    return {
-      ...product,
-      units: product.units,
-    };
-  });
+// // Update cart amount
+// export function updateUnits(action, id) {
+//   cart = cart.map((product) => {
+//     //let updatedUnits = product.units;
+//     //let defaultUnits = product.units;
 
-  updateCartView();
-}
+//     if (product.id === id) {
+//       if (action === "increase") {
+//         let defaultUnits = product.units;
+//         //product.units++;
+//         defaultUnits++;
+//       } else if (action === "decrease" && product.units > 1) {
+//         //product.units--;
+//         defaultUnits--;
+//       }
+//     }
 
-// Update the cart total
-export function cartTotal() {
-  let cartPrice = 0;
-  let cartItems = 0;
+//     return {
+//       ...product,
+//       units: product.units,
+//     };
+//   });
 
-  cart.forEach((product) => {
-    cartPrice += product.price * product.units;
-    cartItems += product.units;
-  });
+//   updateCartView();
+// }
 
-  cartTotalPrice.textContent = cartPrice;
-  cartCount.textContent = cartItems;
-}
+// // Update the cart total
+// export function cartTotal() {
+//   let cartPrice = 0;
+//   let cartItems = 0;
 
-export function removeCartProducts(id) {
-  const index = cart.findIndex((product) => {
-    product.id === id;
-    console.log(id);
-  });
+//   cart.forEach((product) => {
+//     cartPrice += product.price * product.units;
+//     cartItems += product.units;
+//   });
 
-  cart.splice(index, 1);
+//   cartTotalPrice.textContent = cartPrice;
+//   cartCount.textContent = cartItems;
+// }
 
-  updateCartView();
-}
+// export function removeCartProducts(id) {
+//   const index = cart.findIndex((product) => {
+//     product.id === id;
+//     //console.log(id);
+//   });
+
+//console.log(index);
+// cart = cart.filter((produuuuuuct) => {
+//   produuuuuuct.id !== id;
+// });
+// const cartID = cart.map((product) => {
+//   product.id === id;
+//   console.log(id);
+// });
+
+//   cart.splice(index, 1);
+//   // const id = action.payload;
+//   //     const existingItem = state.items.find((item) => item.id === id);
+//   //     state.totalQuantity--;
+//   //     if (existingItem.quantity === 1) {
+//   //       state.items = state.items.filter((item) => item.id !== id);
+
+//   // const existingItem = cart.find((item) => item.id === id);
+//   // if (existingItem.units < 1) {
+//   //   console.log("hm");
+//   // }
+//   updateCartView();
+// }
+
+// // Save cart to local storage
