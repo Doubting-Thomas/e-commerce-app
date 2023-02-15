@@ -2,12 +2,7 @@ import { displayMobileNav } from "./model/mobileNav.js";
 import { scrollAnimation } from "./model/smoothScroll";
 import { renderStickyNavbar } from "./model/stickyNav";
 import { renderAllSections } from "./model/scrollAnimation";
-import {
-  renderCartDisplay,
-  closeCartDisplay,
-  renderFavoritesDisplay,
-  closeFavoritesDisplay,
-} from "./model/model.js";
+import { renderCartDisplay, closeCartDisplay } from "./model/model.js";
 import { btnClearCart } from "./config.js";
 import { renderProducts } from "./views/productsView.js";
 import { clearCartItems } from "./model/cart/clearCart.js";
