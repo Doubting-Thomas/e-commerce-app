@@ -1,5 +1,5 @@
 export const btnHero = document.querySelector(".btn--white");
-export const navBookmarksIcon = document.querySelector(".nav-btn-bookmarks");
+export const navFavoritesIcon = document.querySelector(".nav-btn-favorites");
 export const navCartIcon = document.querySelector(".nav-btn-cart");
 export const navMenu = document.querySelector(".btn-nav");
 export const navContainer = document.querySelector(".nav");
@@ -16,4 +16,5 @@ export const cartProductPrice = document.querySelectorAll(".cart__price");
 export const cartTotalPrice = document.querySelector(".cart__total");
 export const cartCount = document.querySelector(".nav__cart-count");
 export const btnClearCart = document.querySelector(".cart__clear");
-export const cartDelete = document.querySelector(".cart__delete");
+export const cartDelete = document.querySelector(".cart__delete");export const bt
+export const allProducts = document.querySelectorAll(".products__box");
