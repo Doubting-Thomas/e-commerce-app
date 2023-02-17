@@ -16,5 +16,5 @@ export const cartProductPrice = document.querySelectorAll(".cart__price");
 export const cartTotalPrice = document.querySelector(".cart__total");
 export const cartCount = document.querySelector(".nav__cart-count");
 export const btnClearCart = document.querySelector(".cart__clear");
-export const cartDelete = document.querySelector(".cart__delete");export const bt
+export const cartDelete = document.querySelector(".cart__delete");
 export const allProducts = document.querySelectorAll(".products__box");
