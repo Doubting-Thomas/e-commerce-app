@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" src="src/js/controller.js"></script>
+    <title>Azure Store</title>
+  </head>
+  <body>
+    <section class="login auth">
+      <div class="auth__container login__container">
+        <div class="auth__image login__image"></div>
+
+        <div class="auth__form login__form">
+          <h2 class="auth_heading login_heading heading u-margin-bottom-md">
+            Login
+          </h2>
+          <form>
+            <input
+              type="text"
+              class="auth__text login__text u-margin-bottom-sm"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              type="password"
+              class="auth__password login__password u-margin-bottom-sm"
+              placeholder="Password"
+              required
+            />
+            <a href="" class="btn btn--intro u-margin-bottom-sm">Login</a>
+            <p class="login__cta">
+              Don't have an account?
+              <a href="signup.html" class="auth__link login__link">Sign Up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
